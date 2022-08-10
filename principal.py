@@ -6,26 +6,7 @@ from bson import ObjectId
 from flask_mail import Mail, Message
 
 
-def comprueba_fondo():
-	pass
-DOCUMENTOS = ["doc","docx"]
 
-def usuario():
-	pass
-def password():
-	pass
-
-EXTENSIONES = ["png", "jpg", "jpeg"]
-app = Flask(__name__)
-app.config["UPLOAD_FOLDER"] = "./static/fondos"
-
-app.config["MAIL_SERVER"]= "mail.cepibase.int"
-app.config["MAIL_PORT"] = 25
-app.config["MAIL_USERNAME"] = "USUARIO"
-app.config["MAIL_PASSWORD"] = "PASSWORD"
-app.config["MAIL_USE_TLS"] = False
-app.config["MAIL_USE_SSL"] = False
-mail= Mail(app)
 
 client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.fondos_flask
